@@ -1,0 +1,18 @@
+/* These global variables attached to the root element are included here for theming according to the assignment outline */
+
+:root {
+  
+  --dark: #1f2937;               /* Hero and Footer background, Information Header text and Quote text */
+  --grey-blue: #e5e7eb;          /* Quote Section bg color, Hero Secondary text and Header Link text */  
+  --light: #f9faf8;              /* Hero text and Logo text */ 
+  --cta-bg-color: #3882f6;       /* Use as the CTA button color too  */
+
+  --extra-large-text-size: 48px;   /*  Hero Main text */
+  --large-text-size: 36px;         /*  Information Header text and Quote text */ 
+  --medium-text-size: 24px;        /*  Header Logo text */ 
+  --small-text-size: 18px;         /*  Hero Secondary and Header Link text */ 
+
+  --extra-bold: 800;               /*  Font-weight for Hero Main and Information Header text */
+  --light: 300;                    /*  Font-weight for Quote text, use with "font-style: italic" for the Quote text */
+
+}
