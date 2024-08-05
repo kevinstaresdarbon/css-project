@@ -1,18 +1,386 @@
 /* These global variables attached to the root element are included here for theming according to the assignment outline */
 
 :root {
-  
-  --dark: #1f2937;               /* Hero and Footer background, Information Header text and Quote text */
-  --grey-blue: #e5e7eb;          /* Quote Section bg color, Hero Secondary text and Header Link text */  
-  --light: #f9faf8;              /* Hero text and Logo text */ 
-  --cta-bg-color: #3882f6;       /* Use as the CTA button color too  */
+  --dark: #1f2937; /* Hero and Footer background, Information Header text and Quote text */
+  --grey-blue: #e5e7eb; /* Quote Section bg color, Hero Secondary text and Header Link text */
+  --light: #f9faf8; /* Hero text and Logo text */
+  --cta-bg-color: #3882f6; /* Use as the CTA button color too  */
 
-  --extra-large-text-size: 48px;   /*  Hero Header text */
-  --large-text-size: 36px;         /*  Information Header text and Quote text */ 
-  --medium-text-size: 24px;        /*  Header Logo text */ 
-  --small-text-size: 18px;         /*  Hero Secondary and Header Link text */ 
+  --extra-large-text-size: 48px; /*  Hero Header text */
+  --large-text-size: 36px; /*  Information Header text and Quote text */
+  --medium-text-size: 24px; /*  Header Logo text */
+  --small-text-size: 18px; /*  Hero Secondary and Header Link text */
 
-  --extra-bold: 800;               /*  Font-weight for Hero Main and Information Header text */
-  --light: 300;                    /*  Font-weight for Quote text, use with "font-style: italic" for the Quote text */
+  --extra-bold: 800; /*  Font-weight for Hero Main and Information Header text */
+  --lightWeight: 300; /*  Font-weight for Quote text, use with "font-style: italic" for the Quote text */
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* header styles */
+#header {
+  background-color: var(--dark);
+  padding: 1rem;
+}
+.main_nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 20rem;
+}
+
+.header_logo {
+  font-size: var(--medium-text-size);
+  color: var(--light);
+  /* ask about */
+  font-weight: var(--extra-bold);
+}
+
+.nav_links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav_links a {
+  text-decoration: none;
+  color: var(--grey-blue);
+  font-size: var(--small-text-size);
+}
+.nav_links a:hover {
+  color: var(--cta-bg-color);
+  border-bottom: 2px solid var(--light);
+}
+/* end of header styles */
+/* hero style */
+#hero {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--dark);
+  gap: 1rem;
+}
+/* end of hero style */
+/* hero left style */
+.hero_left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 10rem;
+}
+
+.hero_header {
+  font-size: var(--extra-large-text-size);
+  font-weight: var(--extra-bold);
+  color: var(--light);
+}
+
+.hero_secondary {
+  font-size: var(--small-text-size);
+  color: var(--grey-blue);
+  margin-top: 1rem;
+}
+
+.hero_signup {
+  background-color: var(--cta-bg-color);
+  color: var(--light);
+  border: none;
+  padding: 0.7rem 2rem;
+  font-size: var(--small-text-size);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.hero_signup:hover {
+  background-color: #2a5ebf;
+}
+/* end of hero left style */
+
+/* hero right style */
+.hero_right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.hero_right img {
+  width: 80%;
+  height: auto;
+  max-width: 100%;
+}
+/* end of hero right style */
+/* end of hero styles */
+
+/* information styles */
+#information {
+  padding: 2rem;
+  background-color: var(--light);
+}
+
+.info_header {
+  font-size: var(--large-text-size);
+  font-weight: var(--extra-bold);
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.info_figures {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.info_figures figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 250px;
+  width: 200px;
+}
+
+.info_figures img {
+  width: 190px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  border: 5px solid var(--cta-bg-color);
+  border-radius: 12px;
+}
+
+.figure_text {
+  font-size: var(--small-text-size);
+  color: var(--dark);
+  margin: 0;
+}
+/* end of inforamtion styles */
+
+/* quote styles */
+#quote {
+  background-color: var(--grey-blue);
+  margin-top: 3rem;
+  padding: 5rem;
+  max-height: 300px;
+}
+
+.quote_text {
+  font-size: var(--large-text-size);
+  font-weight: var(--lightWeight);
+  color: var(--dark);
+  margin: 2rem 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.quote_author {
+  font-size: var(--small-text-size);
+  font-weight: var(--extra-bold);
+  color: var(--dark);
+  margin: 0;
+  text-align: end;
+}
+/* end of quote styles */
+
+/* CTA styles */
+#CTA {
+  background-color: var(--cta-bg-color);
+  padding: 4rem;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.CTA_left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.CTA_header {
+  color: var(--light);
+  font-size: var(--medium-text-size);
+  font-weight: var(--extra-bold);
+  margin-bottom: 0.5rem;
+}
+
+.CTA_text {
+  color: var(--grey-blue);
+  font-size: var(--small-text-size);
+  font-weight: var(--lightWeight);
+}
+
+.CTA_signup {
+  background-color: inherit;
+  color: var(--light);
+  border: 2px solid var(--light);
+  border-radius: 10px;
+  padding: 0.6rem 2rem;
+  font-size: var(--small-text-size);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.CTA_signup:hover {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+#footer {
+  background-color: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* For devices smaller than 600px */
+@media (max-width: 600px) {
+  .main_nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav_links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #hero {
+    flex-direction: column-reverse;
+    text-align: start;
+    flex-wrap: wrap;
+  }
+
+  .hero_left {
+    padding-left: 1rem;
+    justify-content: flex-start;
+  }
+
+  .hero_header {
+    font-size: var(--medium-text-size);
+  }
+  .hero_secondary {
+    overflow-wrap: break-word;
+    margin: 1rem 0;
+  }
+  .hero_signup {
+    padding: 5px 5px;
+    font-size: 15px;
+  }
+
+  .hero_right img {
+    max-width: 100%;
+    max-height: 80%;
+  }
+
+  .info_figures {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info_figures figure {
+    max-width: 100%;
+  }
+
+  #quote {
+    padding: 2rem;
+  }
+  .quote_text {
+    font-size: var(--medium-text-size);
+    margin: 1rem 0;
+    line-height: 1;
+    text-align: start;
+  }
+  #CTA {
+    flex-direction: column;
+    gap: 2rem;
+    width: 90%;
+  }
+
+  .CTA_left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .CTA_signup {
+    padding: 1rem 3rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .main_nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  #hero {
+    flex-direction: column-reverse;
+    text-align: start;
+    flex-wrap: wrap;
+  }
+
+  .hero_left {
+    padding-left: 1rem;
+    justify-content: flex-start;
+  }
+  .hero_right img {
+    max-width: 100%;
+    max-height: 80%;
+  }
+  .info_figures {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info_figures figure {
+    max-width: 100%;
+  }
+  #quote {
+    padding: 2rem;
+  }
+  .quote_text {
+    font-size: var(--medium-text-size);
+    margin: 1rem 0;
+    line-height: 1;
+    text-align: start;
+  }
+  #CTA {
+    flex-direction: column;
+    gap: 2rem;
+    width: 90%;
+  }
+
+  .CTA_left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .CTA_signup {
+    padding: 1rem 3rem;
+  }
+}
+@media (min-width: 900px) and (max-width: 1050px) {
+  #quote {
+    padding: 2rem;
+  }
+  .quote_text {
+    font-size: var(--medium-text-size);
+    margin: 1rem 0;
+    line-height: 1;
+    text-align: start;
+  }
 }
