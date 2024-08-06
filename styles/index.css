@@ -176,6 +176,7 @@
 .quote_text {
   font-size: var(--large-text-size);
   font-weight: var(--lightWeight);
+  font-style: italic;
   color: var(--dark);
   margin: 2rem 0;
   line-height: 1;
