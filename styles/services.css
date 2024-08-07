@@ -82,6 +82,7 @@ body {
   background-image: url(../imges/jpeg-optimizer_Home.png);
   background-repeat: no-repeat;
   background-size: 100vw calc(100vh - 76px);
+  margin-top: 77px;
 }
 
 figure.services_left{
@@ -321,6 +322,7 @@ figure.services_left{
     width: 100vw;
     height: 80rem;
     background-size: 100vw 80rem;
+    margin-top: 130px;
   }
 
   figure.services_left{
