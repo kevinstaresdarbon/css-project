@@ -154,7 +154,7 @@ figure.services_left{
 }
 /* services_details styles */
 #services_details{
-  height: 100vh;
+  height: auto;
   background-color: var(--grey-blue);
   color: var(--dark);
 } 
@@ -166,7 +166,8 @@ figure.services_left{
 }
 
 #services_details article img{
-  width: 33rem;
+  width: 25vw;
+  height: 25vw;
   border-radius: 1rem;
 }
 
@@ -234,6 +235,20 @@ figure.services_left{
     padding-right: 1rem;
   }
 
+  #services_details article img{
+    height: 250px;
+    width: 250px;
+  }
+
+  .article_header{
+    font-size: var(--medium-text-size);
+    font-weight: var(--extra-bold);
+    margin-bottom: 2rem;
+  }
+  
+  .article_text{
+    font-size: var(--small-text-size);
+  }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
@@ -248,7 +263,8 @@ figure.services_left{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 60rem;
+    height: 70rem;
+    background-size: 100vw 80rem;
   }
 
   figure.services_left{
@@ -271,6 +287,20 @@ figure.services_left{
     padding-right: 1rem;
   }
 
+  
+  #services_details article img{
+  display: none;
+  }
+
+  .article_header{
+    font-size: var(--medium-text-size);
+    font-weight: var(--extra-bold);
+    margin-bottom: 2rem;
+  }
+  
+  .article_text{
+    font-size: var(--small-text-size);
+  }
 }
 
 @media (max-width: 600px){
@@ -289,8 +319,8 @@ figure.services_left{
     flex-direction: column;
     justify-content: space-around;
     width: 100vw;
-    height: 79rem;
-    background-size: 100vw 79rem;
+    height: 80rem;
+    background-size: 100vw 80rem;
   }
 
   figure.services_left{
@@ -306,13 +336,44 @@ figure.services_left{
     width: 18rem;
   }
 
+ 
   .services_right{
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+    padding-left: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .service_text{
     padding-right: 1rem;
   }
 
+  #services_details article {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  } 
+
+  #services_details .finance_article{
+    flex-direction: column-reverse;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+
+  #services_details article img{
+    height: 300px;
+    width: 300px;
+    align-self: center;
+  }
+
+  .article_header{
+    font-size: var(--medium-text-size);
+    font-weight: var(--extra-bold);
+    margin-bottom: 2rem;
+  }
+  
+  .article_text{
+    font-size: var(--small-text-size);
+  }
 }
