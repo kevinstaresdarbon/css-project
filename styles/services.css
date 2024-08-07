@@ -4,6 +4,7 @@
   --dark: #1f2937; /* Hero and Footer background, Information Header text and Quote text */
   --grey-blue: #e5e7eb; /* Quote Section bg color, Hero Secondary text and Header Link text */
   --light: #f9faf8; /* Hero text and Logo text */
+  --silverish: rgb(194, 203, 206);  /* Service Text and Tagline */
   --cta-bg-color: #3882f6; /* Use as the CTA button color too  */
 
   --extra-large-text-size: 48px; /*  Hero Header text */
@@ -71,97 +72,60 @@ body {
   color: var(--cta-bg-color);
 }
 /* end of header styles */
-/* hero styles */
-#hero {
-  width: 100vw;
+
+/* services styles */
+#services{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
   height: calc(100vh - 76px);
   background-image: url(../imges/jpeg-optimizer_Home.png);
   background-repeat: no-repeat;
   background-size: 100vw calc(100vh - 76px);
 }
 
-.tagline{
-  position: relative;
-  top: 80vh;
-  left: 12vw;
-  color: var(--light);
-  font-size: var(--medium-text-size);
-}
-/* end of hero styles */
-/* start of profile styles */
-#profile{
-  display:flex;
-  justify-content: center;
+figure.services_left{
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 100vw;
-  height: 45vh;
-  background-color: var(--grey-blue);
-}
-
-.profile_figure{
-  display:flex;
-  align-items: flex-start;
-  margin-left: 2rem;
-  padding: 1rem 4rem;
-}
-
-.profile_figure img{
-  width:28rem;
-  margin-right: 2rem;
-}
-
-.profile_right{
-  margin: 0rem 2rem;
-}
-
-.profile_header{
-  font-size: var(--extra-large-text-size);
-  font-weight: var(--extra-bold);
-  color: var(--dark);
-  margin-bottom: 2rem;
-}
-
-.profile_text{
-  color: var(--dark);
-  font-size: var(--medium-text-size);
-  padding-right: 2rem;
-}
-/* end of profile styles */
-/* services styles */
-#services{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 40rem;
-  background-color: var(--dark);
-}
-
-.services_left{
   margin-left: 2rem;
   margin-right: 2rem;
   margin-top: 3rem;
+  max-width: 25rem;
   align-self: flex-start;
+  background-color: var(--dark);
+  border-radius: 1rem;
+  width: 24rem;
 }
 
 .services_left img{
+  border-radius: 1rem;
   width:22rem;
+  margin-bottom: 1rem;
 }
 
 .services_header{
   font-size: var(--extra-large-text-size);
   font-weight: var(--extra-bold);
   color: var(--light);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tagline{
+  color: var(--silverish);
+  font-size: var(--medium-text-size);
+  margin: 1rem;
 }
 
 .services_right{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-right: 2rem;
-  padding-left: 1rem;
-  padding-top: 4rem;
+  max-width: 35rem;
+  margin-right: 10rem;
+  padding-top: 1rem;
+  background-color: var(--dark);
+  border-radius: 1rem;
 }
 
 .service_item{
@@ -172,7 +136,7 @@ body {
 
 .service_number{
   font-size: var(--large-text-size);
-  color: grey;
+  color: var(--light);
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -185,9 +149,35 @@ body {
 
 .service_text{
   font-size: var(--small-text-size);
-  color: var(--light);
+  color: rgb(194, 203, 206);
   padding-right: 2rem;
+}
+/* services_details styles */
+#services_details{
+  height: 100vh;
+  background-color: var(--grey-blue);
+  color: var(--dark);
+} 
 
+#services_details article {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+#services_details article img{
+  width: 33rem;
+  border-radius: 1rem;
+}
+
+.article_header{
+  font-size: var(--large-text-size);
+  font-weight: var(--extra-bold);
+  margin-bottom: 2rem;
+}
+
+.article_text{
+  font-size: var(--medium-text-size);
 }
 /* end of services styles */
 /*footer styles */
@@ -217,37 +207,31 @@ body {
 /* media queries */
 @media (min-width: 901px) and (max-width: 1050px) {
 
-  #profile{
-    height: 45vh;
-  }
-
-  .profile_text{
-    padding-right: 2rem;
-  }
-
-  .profile_figure img{
-    width: 20rem;
-  }
-
   #services{
     height: 40rem;
+    align-items: space-around;
   }
 
-  .services_left{
-    align-self: center;
+  figure.services_left{
+    align-self: flex-start;
+    margin-top: 2rem;
+    width: 25rem;
+  }
+
+  .services_left img{
+    width: 20rem;
   }
 
   .services_right{
     padding-left: 0;
+    padding-top: 0;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    align-self: flex-start;
   }
 
   .service_text{
-    padding-right: 0;
-  }
-
-
-  .services_left img{
-    width: 20rem;
+    padding-right: 1rem;
   }
 
 }
@@ -260,44 +244,31 @@ body {
     gap: 0.5rem;
   }
 
-  #profile{
-    height: 45rem; 
-  }
-
-  .profile_figure{
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  .profile_figure img{
-    width: 25rem;
-    margin-bottom: 1rem;
-  }
-
-  .profile_text{
-    padding-right: 2rem;
-    margin-bottom: 2rem;
-  }
-
   #services{
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     height: 60rem;
   }
 
-  .services_left{
-    align-self: flex-start;
+  figure.services_left{
+    align-self: center;
+    width: 60rem;
+    margin-top: 2rem;
   }
+
+  .services_left img{
+    width: 22rem;
+  }
+
   .services_right{
     padding-left: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .service_text{
-    padding-right: 0;
-  }
-
-
-  .services_left img{
-    width: 25rem;
+    padding-right: 1rem;
   }
 
 }
@@ -314,46 +285,34 @@ body {
     gap: 0.5rem;
   }
 
-  #profile{
-    height: 45rem; 
-  }
-
-  .profile_figure{
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  .profile_figure img{
-    width: 20rem;
-    margin-bottom: 1rem;
-  }
-
-  .profile_right{
-    margin: 0rem 0.5rem;
-  }
-  
-  .profile_text{
-    padding-right: 0.5rem;
-    margin-bottom: 2rem;
-  }
-
   #services{
     flex-direction: column;
-    height: 75rem;
+    justify-content: space-around;
+    width: 100vw;
+    height: 79rem;
+    background-size: 100vw 79rem;
+  }
+
+  figure.services_left{
+    width: calc(100vw - 2rem);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    align-self: center;
+  }
+
+  .services_left img{
+    width: 18rem;
   }
 
   .services_right{
-    padding-left: 0;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
   }
 
   .service_text{
-    padding-right: 0;
+    padding-right: 1rem;
   }
-
-
-  .services_left img{
-    width: 20rem;
-  }
-
 
 }
