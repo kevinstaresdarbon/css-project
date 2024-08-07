@@ -1,0 +1,195 @@
+/* These global variables attached to the root element are included here for theming according to the assignment outline */
+
+:root {
+  --dark: #1f2937; /* Hero and Footer background, Information Header text and Quote text */
+  --grey-blue: #e5e7eb; /* Quote Section bg color, Hero Secondary text and Header Link text */
+  --light: #f9faf8; /* Hero text and Logo text */
+  --cta-bg-color: #3882f6; /* Use as the CTA button color too  */
+
+  --extra-large-text-size: 48px; /*  Hero Header text */
+  --large-text-size: 36px; /*  Information Header text and Quote text */
+  --medium-text-size: 24px; /*  Header Logo text */
+  --small-text-size: 18px; /*  Hero Secondary and Header Link text */
+
+  --extra-bold: 800; /*  Font-weight for Hero Main and Information Header text */
+  --lightWeight: 300; /*  Font-weight for Quote text, use with "font-style: italic" for the Quote text */
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assits/fonts/Roboto-Regular.ttf") format("truetype"),
+    url("../assits/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* header styles */
+#header {
+  background-color: var(--dark);
+  padding: 1rem;
+  height: 61px;
+}
+
+.main_nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 20rem;
+}
+
+.header_logo {
+  font-size: var(--medium-text-size);
+  color: var(--light);
+  /* ask about */
+  font-weight: var(--extra-bold);
+}
+
+.nav_links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav_links a {
+  text-decoration: none;
+  color: var(--grey-blue);
+  font-size: var(--small-text-size);
+}
+
+.nav_links a:hover {
+  color: var(--cta-bg-color);
+  border-bottom: 2px solid var(--light);
+}
+/* end of header styles */
+/* hero styles */
+#hero {
+  width: 100vw;
+  height: calc(100vh - 76px);
+  background-image: url(../imges/jpeg-optimizer_Home.png);
+  background-repeat: no-repeat;
+  background-size: 100vw calc(100vh - 76px);
+}
+
+.tagline{
+  position: relative;
+  top: 80vh;
+  left: 12vw;
+  color: var(--light);
+  font-size: var(--medium-text-size);
+}
+/* end of hero styles */
+/* start of profile styles */
+#profile{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 40vh;
+  background-color: var(--grey-blue);
+}
+
+.profile_figure{
+  display:flex;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+}
+
+.profile_img{
+  flex-grow: 1;
+  object-fit: cover;
+  margin-right: 2rem;
+}
+
+.profile_right{
+  margin: 0rem 2rem;
+  flex-grow: 1;
+}
+
+.profile_header{
+  font-size: var(--extra-large-text-size);
+  font-weight: var(--extra-bold);
+  color: var(--dark);
+  margin-bottom: 2rem;
+}
+
+.profile_text{
+  color: var(--dark);
+  font-size: var(--medium-text-size);
+  padding-right: 7rem;
+}
+/* end of profile styles */
+/* services styles */
+#services{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 60vh;
+  background-color: var(--dark);
+}
+
+.services_left{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 3rem;
+  align-self: flex-start;
+}
+
+.services_header{
+  font-size: var(--extra-large-text-size);
+  font-weight: var(--extra-bold);
+  color: var(--light);
+  margin-bottom: 2rem;
+}
+
+.services_right{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-top: 4rem;
+}
+
+.service_item{
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.service_number{
+  font-size: var(--large-text-size);
+  color: grey;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.service_header{
+  font-size: var(--medium-text-size);
+  color: var(--light);
+  margin-bottom: 0.5rem;
+}
+
+.service_text{
+  font-size: var(--small-text-size);
+  color: var(--light);
+  padding-right: 2rem;
+
+}
+/* end of services styles */
+#footer {
+  background-color: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 1.5rem;
+  height: 3rem;
+}
