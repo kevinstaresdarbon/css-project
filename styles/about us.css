@@ -1,0 +1,184 @@
+@import url("../styles/index.css"); /*header styles add from index.css*/
+:root {
+    --dark: #1f2937; /* Hero and Footer background, Information Header text and Quote text */
+    --grey-blue: #e5e7eb; /* Quote Section bg color, Hero Secondary text and Header Link text */
+    --light: #f9faf8; /* Hero text and Logo text */
+    --cta-bg-color: #3882f6; /* Use as the CTA button color too  */
+  
+    --extra-large-text-size: 48px; /*  Hero Header text */
+    --large-text-size: 36px; /*  Information Header text and Quote text */
+    --medium-text-size: 24px; /*  Header Logo text */
+    --small-text-size: 18px; /*  Hero Secondary and Header Link text */
+  
+    --extra-bold: 800; /*  Font-weight for Hero Main and Information Header text */
+    --lightWeight: 300; /*  Font-weight for Quote text, use with "font-style: italic" for the Quote text */
+  }
+  @font-face {
+    font-family: "Roboto";
+    src: url("../assits/fonts/Roboto-Regular.ttf") format("truetype"),
+      url("../assits/fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: "Roboto", sans-serif;
+  }
+
+/* about section */
+#about_side{
+    display: flex;
+    justify-content: center;
+    background-color:var(--light);
+    gap: 15px;
+    padding: 2rem;
+
+}
+.texts_side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 3rem; */
+    flex: 1;
+}
+.texts_side h2{
+    font-size: var(--extra-large-text-size);
+    font-weight: var(--extra-bold);
+    color: var(--cta-bg-color);
+    margin-bottom: 2rem;
+}
+.texts_side p{
+    font-size: var(--small-text-size);
+    font-weight: var(--extra-bold);
+    color: var(--dark);
+}
+.left_img{
+    flex: 1;
+}
+.left_img img{
+    width: 100%;
+    height: auto;
+}
+/* contact section */
+#contact_sec{
+    display: flex;
+    justify-content: center;
+    background-color:var(--dark);
+    padding: 2rem;
+}
+.contact_side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    flex: 1;
+}
+.contact_side h2{
+    font-size: var(--extra-large-text-size);
+    font-weight: var(--extra-bold);
+    color: var(--cta-bg-color);
+    margin-bottom: 4rem;
+}
+.contact_side p{
+    color: var(--light);
+    font-size: var(--small-text-size);
+    font-weight: var(--extra-bold);
+}
+.img_side{
+    flex: 1;
+}
+
+
+
+@media  (max-width:600px) {
+    #about_side, #contact_sec {
+        flex-direction: column;
+        align-items: center; /* Center content in column layout */
+    }
+    .contact_side {
+        order: 2;
+        padding: 2rem; /* Adjust padding for smaller screens */
+    }
+
+    .img_side {
+        order: 1;
+        width: 100%; /* Ensure image side takes full width */
+    }
+
+    .left_img, .img_side img {
+        width: 100%;
+        height: auto; /* Ensure images maintain aspect ratio */
+    }
+
+    .texts_side h2, .contact_side h2 {
+        font-size: var(--large-text-size); /* Adjust font size for smaller screens */
+    }
+
+    .texts_side p, .contact_side p {
+        font-size: var(--medium-text-size); /* Adjust font size for smaller screens */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    #about_side, #contact_sec {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact_side {
+        order: 2;
+        padding: 2.5rem;
+    }
+
+    .img_side {
+        order: 1;
+        width: 100%;
+    }
+
+    .left_img, .img_side img {
+        width: 100%;
+        height: auto;
+    }
+
+    .texts_side h2, .contact_side h2 {
+        font-size: calc(var(--extra-large-text-size) - 0.5rem);
+    }
+
+    .texts_side p, .contact_side p {
+        font-size: var(--small-text-size);
+    }
+}
+@media (min-width: 1025px) {
+    #about_side, #contact_sec {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .contact_side {
+        order: 1;
+        padding: 3rem;
+    }
+
+    .img_side {
+        order: 2;
+        width: 100%;
+    }
+
+    .left_img, .img_side img {
+        width: 100%;
+        height: auto;
+    }
+
+    .texts_side h2, .contact_side h2 {
+        font-size: var(--extra-large-text-size);
+    }
+
+    .texts_side p, .contact_side p {
+        font-size: var(--small-text-size);
+    }
+}
+

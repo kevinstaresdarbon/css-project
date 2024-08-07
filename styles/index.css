@@ -32,26 +32,33 @@ body {
 
 /* header styles */
 #header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   background-color: var(--dark);
-  padding: 1rem;
+  padding: 1.5rem;
+  height: auto;
 }
+
 .main_nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 20rem;
 }
 
-.header_logo {
+.header_logo a {
   font-size: var(--medium-text-size);
   color: var(--light);
-  /* ask about */
   font-weight: var(--extra-bold);
+  text-decoration: none;
 }
 
 .nav_links {
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-right: 2rem;
 }
 
 .nav_links a {
@@ -59,9 +66,9 @@ body {
   color: var(--grey-blue);
   font-size: var(--small-text-size);
 }
+
 .nav_links a:hover {
   color: var(--cta-bg-color);
-  border-bottom: 2px solid var(--light);
 }
 /* end of header styles */
 /* hero style */

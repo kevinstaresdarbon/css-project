@@ -1,5 +1,5 @@
 /* These global variables attached to the root element are included here for theming according to the assignment outline */
-
+@import url("../styles/index.css");  /*header styles add from index.css*/
 :root {
   --dark: #1f2937; /* Hero and Footer background, Information Header text and Quote text */
   --grey-blue: #e5e7eb; /* Quote Section bg color, Hero Secondary text and Header Link text */
