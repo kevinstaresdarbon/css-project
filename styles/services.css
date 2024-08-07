@@ -32,31 +32,33 @@
 body {
   font-family: "Roboto", sans-serif;
 }
-
+/* styles for desktop */
 /* header styles */
+
 #header {
   background-color: var(--dark);
   padding: 1.5rem;
-  height: 5rem;
+  height: auto;
 }
 
 .main_nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 20rem;
 }
 
-.header_logo {
+.header_logo a {
   font-size: var(--medium-text-size);
   color: var(--light);
-  /* ask about */
   font-weight: var(--extra-bold);
+  text-decoration: none;
 }
 
 .nav_links {
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-right: 2rem;
 }
 
 .nav_links a {
@@ -67,7 +69,6 @@ body {
 
 .nav_links a:hover {
   color: var(--cta-bg-color);
-  border-bottom: 2px solid var(--light);
 }
 /* end of header styles */
 /* hero styles */
@@ -93,25 +94,24 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 40vh;
+  height: 45vh;
   background-color: var(--grey-blue);
 }
 
 .profile_figure{
   display:flex;
   align-items: flex-start;
-  padding: 1rem 2rem;
+  margin-left: 2rem;
+  padding: 1rem 4rem;
 }
 
-.profile_img{
-  flex-grow: 1;
-  object-fit: cover;
+.profile_figure img{
+  width:28rem;
   margin-right: 2rem;
 }
 
 .profile_right{
   margin: 0rem 2rem;
-  flex-grow: 1;
 }
 
 .profile_header{
@@ -124,7 +124,7 @@ body {
 .profile_text{
   color: var(--dark);
   font-size: var(--medium-text-size);
-  padding-right: 7rem;
+  padding-right: 2rem;
 }
 /* end of profile styles */
 /* services styles */
@@ -133,7 +133,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 60vh;
+  height: 40rem;
   background-color: var(--dark);
 }
 
@@ -142,6 +142,10 @@ body {
   margin-right: 2rem;
   margin-top: 3rem;
   align-self: flex-start;
+}
+
+.services_left img{
+  width:22rem;
 }
 
 .services_header{
@@ -186,10 +190,170 @@ body {
 
 }
 /* end of services styles */
+/*footer styles */
 #footer {
   background-color: var(--dark);
   color: var(--light);
   text-align: center;
   padding: 1.5rem;
-  height: 5rem;
+  height: auto;
+  font-size: var(--small-text-size);
+}
+
+#footer a{
+  display: block;
+  text-decoration: none;
+  color: var(--light);
+  margin-bottom: 1rem;
+
+}
+
+#footer a:hover{
+  color: var(--cta-bg-color)
+}
+
+/* end of footer styles */
+/* end of styles for desktop */
+/* media queries */
+@media (min-width: 901px) and (max-width: 1050px) {
+
+  #profile{
+    height: 45vh;
+  }
+
+  .profile_text{
+    padding-right: 2rem;
+  }
+
+  .profile_figure img{
+    width: 20rem;
+  }
+
+  #services{
+    height: 40rem;
+  }
+
+  .services_left{
+    align-self: center;
+  }
+
+  .services_right{
+    padding-left: 0;
+  }
+
+  .service_text{
+    padding-right: 0;
+  }
+
+
+  .services_left img{
+    width: 20rem;
+  }
+
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+ 
+  .main_nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  #profile{
+    height: 45rem; 
+  }
+
+  .profile_figure{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .profile_figure img{
+    width: 25rem;
+    margin-bottom: 1rem;
+  }
+
+  .profile_text{
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  #services{
+    flex-direction: column;
+    height: 60rem;
+  }
+
+  .services_left{
+    align-self: flex-start;
+  }
+  .services_right{
+    padding-left: 0;
+  }
+
+  .service_text{
+    padding-right: 0;
+  }
+
+
+  .services_left img{
+    width: 25rem;
+  }
+
+}
+
+@media (max-width: 600px){
+  .main_nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav_links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #profile{
+    height: 45rem; 
+  }
+
+  .profile_figure{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .profile_figure img{
+    width: 20rem;
+    margin-bottom: 1rem;
+  }
+
+  .profile_right{
+    margin: 0rem 0.5rem;
+  }
+  
+  .profile_text{
+    padding-right: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  #services{
+    flex-direction: column;
+    height: 75rem;
+  }
+
+  .services_right{
+    padding-left: 0;
+  }
+
+  .service_text{
+    padding-right: 0;
+  }
+
+
+  .services_left img{
+    width: 20rem;
+  }
+
+
 }
