@@ -14,12 +14,22 @@
   --extra-bold: 800; /*  Font-weight for Hero Main and Information Header text */
   --lightWeight: 300; /*  Font-weight for Quote text, use with "font-style: italic" for the Quote text */
 }
-
+@font-face {
+  font-family: "Roboto";
+  src: url("../assits/fonts/Roboto-Regular.ttf") format("truetype"),
+    url("../assits/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 /* header styles */
 #header {
   background-color: var(--dark);
@@ -385,4 +395,3 @@
     text-align: start;
   }
 }
-
