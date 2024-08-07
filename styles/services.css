@@ -1,5 +1,5 @@
 /* These global variables attached to the root element are included here for theming according to the assignment outline */
-@import url("../styles/index.css");  /*header styles add from index.css*/
+
 :root {
   --dark: #1f2937; /* Hero and Footer background, Information Header text and Quote text */
   --grey-blue: #e5e7eb; /* Quote Section bg color, Hero Secondary text and Header Link text */
@@ -34,9 +34,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 /* styles for desktop */
-/* header styles */
-
 #header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   background-color: var(--dark);
   padding: 1.5rem;
   height: auto;
@@ -73,6 +75,10 @@ body {
 }
 /* end of header styles */
 
+#top{
+  height:77px;
+}
+
 /* services styles */
 #services{
   display:flex;
@@ -82,7 +88,6 @@ body {
   background-image: url(../imges/jpeg-optimizer_Home.png);
   background-repeat: no-repeat;
   background-size: 100vw calc(100vh - 76px);
-  margin-top: 77px;
 }
 
 figure.services_left{
@@ -197,7 +202,6 @@ figure.services_left{
   text-decoration: none;
   color: var(--light);
   margin-bottom: 1rem;
-
 }
 
 #footer a:hover{
@@ -212,6 +216,7 @@ figure.services_left{
   #services{
     height: 40rem;
     align-items: space-around;
+    background-size: 100vw 50rem;
   }
 
   figure.services_left{
@@ -265,7 +270,7 @@ figure.services_left{
     align-items: center;
     justify-content: space-around;
     height: 70rem;
-    background-size: 100vw 80rem;
+    background-size: 100vw 70rem;
   }
 
   figure.services_left{
@@ -304,7 +309,7 @@ figure.services_left{
   }
 }
 
-@media (max-width: 600px){
+@media (min-width: 346px) and (max-width: 599px){
   .main_nav {
     flex-direction: row;
     align-items: center;
@@ -316,19 +321,20 @@ figure.services_left{
     gap: 0.5rem;
   }
 
+  #top{
+    height: 130px;
+  }
+
   #services{
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 100vw;
-    height: 80rem;
-    background-size: 100vw 80rem;
-    margin-top: 130px;
+    height: 82rem;
+    background-size: 100vw 82rem;
   }
 
   figure.services_left{
     width: calc(100vw - 2rem);
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
     margin-bottom: 1rem;
     margin-top: 0;
     align-self: center;
@@ -378,4 +384,83 @@ figure.services_left{
   .article_text{
     font-size: var(--small-text-size);
   }
+}
+
+/* specifically for galaxy z-fold support! */
+@media (max-width: 345px){
+.main_nav {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav_links {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#top{
+  height: 130px;
+}
+
+#services{
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90rem;
+  background-size: 100vw 90rem;
+}
+
+figure.services_left{
+  width: calc(100vw - 2rem);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  align-self: center;
+}
+
+.services_left img{
+  width: 18rem;
+}
+
+
+.services_right{
+  padding-left: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.service_text{
+  padding-right: 1rem;
+}
+
+#services_details article {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+} 
+
+#services_details .finance_article{
+  flex-direction: column-reverse;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+
+#services_details article img{
+  height: 300px;
+  width: 300px;
+  align-self: center;
+}
+
+.article_header{
+  font-size: var(--medium-text-size);
+  font-weight: var(--extra-bold);
+  margin-bottom: 2rem;
+}
+
+.article_text{
+  font-size: var(--small-text-size);
+}
 }
