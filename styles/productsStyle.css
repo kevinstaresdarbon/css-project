@@ -81,3 +81,27 @@ body {
 }
 
 /* end of header styles */
+
+@media (min-width: 600px) and (max-width: 900px){
+  
+  .main_nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+}
+
+
+@media (max-width: 599px){
+  .main_nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav_links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
