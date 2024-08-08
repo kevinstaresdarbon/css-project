@@ -34,6 +34,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 /* styles for desktop */
+/* header styles */
 #header {
   position: fixed;
   top: 0;
@@ -73,6 +74,11 @@ body {
 .nav_links a:hover {
   color: var(--cta-bg-color);
 }
+
+.nav_links a.current{
+  color: grey;
+}
+
 /* end of header styles */
 
 #top{

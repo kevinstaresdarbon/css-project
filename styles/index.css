@@ -47,6 +47,11 @@ body {
   gap: 20rem;
 }
 
+.header_logo{
+  margin-left: 39px;
+  margin-top:  0.2rem;
+}
+
 .header_logo a {
   font-size: var(--medium-text-size);
   color: var(--light);
@@ -65,6 +70,10 @@ body {
   text-decoration: none;
   color: var(--grey-blue);
   font-size: var(--small-text-size);
+}
+
+.nav_links a.current{
+  color: grey;
 }
 
 .nav_links a:hover {
