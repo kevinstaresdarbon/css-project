@@ -66,6 +66,8 @@ body {
   text-decoration: none;
   color: var(--grey-blue);
   font-size: var(--small-text-size);
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .nav_links a:hover {

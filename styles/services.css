@@ -69,6 +69,8 @@ body {
   text-decoration: none;
   color: var(--grey-blue);
   font-size: var(--small-text-size);
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .nav_links a:hover {
@@ -209,6 +211,8 @@ button.appointment_button{
   font-size: var(--small-text-size);
   background-color: var(--dark);
   color: var(--grey-blue);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button.appointment_button:hover{
