@@ -35,8 +35,11 @@ body {
 }
 /* styles for desktop */
 /* header styles */
-
 #header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   background-color: var(--dark);
   padding: 1.5rem;
   height: auto;
@@ -71,7 +74,16 @@ body {
 .nav_links a:hover {
   color: var(--cta-bg-color);
 }
+
+.nav_links a.current{
+  color: grey;
+}
+
 /* end of header styles */
+
+#top{
+  height:77px;
+}
 
 /* services styles */
 #services{
@@ -154,20 +166,53 @@ figure.services_left{
 }
 /* services_details styles */
 #services_details{
-  height: 100vh;
+  height: auto;
   background-color: var(--grey-blue);
   color: var(--dark);
+  padding: 2rem;
 } 
 
 #services_details article {
   display: flex;
+  align-items: center;
   padding: 2rem;
   gap: 2rem;
 }
 
 #services_details article img{
-  width: 33rem;
+  width: 20rem;
+  height: 20rem;
   border-radius: 1rem;
+  margin: 2rem;
+  z-index: 10;
+}
+
+.img_border{
+  width: 21rem;
+  height: 21rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  z-index: 5;
+  background-color: var(--cta-bg-color);
+}
+
+#services_details .finance_left{
+  display: flex;
+  flex-direction: column;
+}
+
+button.appointment_button{
+  margin: 2rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  align-self: flex-end;
+  font-size: var(--small-text-size);
+  background-color: var(--dark);
+  color: var(--grey-blue);
+}
+
+button.appointment_button:hover{
+  background-color: var(--cta-bg-color);
 }
 
 .article_header{
@@ -195,7 +240,6 @@ figure.services_left{
   text-decoration: none;
   color: var(--light);
   margin-bottom: 1rem;
-
 }
 
 #footer a:hover{
@@ -210,6 +254,7 @@ figure.services_left{
   #services{
     height: 40rem;
     align-items: space-around;
+    background-size: 100vw 50rem;
   }
 
   figure.services_left{
@@ -234,6 +279,29 @@ figure.services_left{
     padding-right: 1rem;
   }
 
+  #services_details article img{
+    height: 16rem;
+    width: 16rem;
+  }
+
+  
+  .img_border{
+    width: 17rem;
+    height: 17rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    background-color: var(--cta-bg-color);
+  }
+
+  .article_header{
+    font-size: var(--medium-text-size);
+    font-weight: var(--extra-bold);
+    margin-bottom: 2rem;
+  }
+  
+  .article_text{
+    font-size: var(--small-text-size);
+  }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
@@ -248,7 +316,8 @@ figure.services_left{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 60rem;
+    height: 70rem;
+    background-size: 100vw 70rem;
   }
 
   figure.services_left{
@@ -271,9 +340,28 @@ figure.services_left{
     padding-right: 1rem;
   }
 
+  
+  #services_details article img{
+  display: none;
+  }
+
+  
+.img_border{
+  display: none;
 }
 
-@media (max-width: 600px){
+  .article_header{
+    font-size: var(--medium-text-size);
+    font-weight: var(--extra-bold);
+    margin-bottom: 2rem;
+  }
+  
+  .article_text{
+    font-size: var(--small-text-size);
+  }
+}
+
+@media (min-width: 346px) and (max-width: 599px){
   .main_nav {
     flex-direction: row;
     align-items: center;
@@ -285,18 +373,20 @@ figure.services_left{
     gap: 0.5rem;
   }
 
+  #top{
+    height: 130px;
+  }
+
   #services{
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 100vw;
-    height: 79rem;
-    background-size: 100vw 79rem;
+    height: 82rem;
+    background-size: 100vw 82rem;
   }
 
   figure.services_left{
     width: calc(100vw - 2rem);
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
     margin-bottom: 1rem;
     margin-top: 0;
     align-self: center;
@@ -306,13 +396,131 @@ figure.services_left{
     width: 18rem;
   }
 
+ 
   .services_right{
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+    padding-left: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .service_text{
     padding-right: 1rem;
   }
 
+  #services_details article {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  } 
+
+  #services_details .finance_article{
+    flex-direction: column-reverse;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  #services_details article img{
+    height: 13rem;
+    width: 13rem;
+  }
+  
+  .img_border{
+    width: 14rem;
+    height: 14rem;
+  }
+  
+
+  .article_header{
+    font-size: var(--medium-text-size);
+    font-weight: var(--extra-bold);
+    margin-bottom: 2rem;
+  }
+  
+  .article_text{
+    font-size: var(--small-text-size);
+  }
+}
+
+/* specifically for galaxy z-fold support! */
+@media (max-width: 345px){
+.main_nav {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav_links {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#top{
+  height: 130px;
+}
+
+#services{
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90rem;
+  background-size: 100vw 90rem;
+}
+
+figure.services_left{
+  width: calc(100vw - 2rem);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  align-self: center;
+}
+
+.services_left img{
+  width: 18rem;
+}
+
+
+.services_right{
+  padding-left: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.service_text{
+  padding-right: 1rem;
+}
+
+#services_details article {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+} 
+
+#services_details .finance_article{
+  flex-direction: column-reverse;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+
+#services_details article img{
+  height: 13rem;
+  width: 13rem;
+}
+
+.img_border{
+  width: 14rem;
+  height: 14rem;
+}
+
+.article_header{
+  font-size: var(--medium-text-size);
+  font-weight: var(--extra-bold);
+  margin-bottom: 2rem;
+}
+
+.article_text{
+  font-size: var(--small-text-size);
+}
 }

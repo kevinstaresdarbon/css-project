@@ -11,17 +11,20 @@
     <header id="header">
       <nav class="main_nav">
         <p class="header_logo">
-          <a href=""> Mega Store </a>
+          <a href="../index.html">  ⬅️ Mega Store </a>
         </p>
         <div class="nav_links">
-          <a href=""> Products </a>
-          <a href=""> Services </a>
-          <a href=""> About us </a>
+          <a href="./products.html"> Products </a>
+          <a href="" class="current"> Services </a>
+          <a href="./about.html"> About us </a>
         </div>
       </nav>
     </header>
 
     <main>
+      <section id="top">
+        
+      </section>
       <section id="services">
         <figure class="services_left">
           <p class="services_header">
@@ -85,10 +88,12 @@
 
       <section id="services_details">
         <article class="repair_article">
-          <img
-            src="../imges/jpeg-optimizer_profile_img.png"
-            alt="A portion of a laptop keyboard and screen showing some css file"
+          <div class="img_border">
+            <img
+            src="../imges/repair.jpg"
+            alt="A laptop with a broken screen with shattered glass flying in the background"
           >
+          </div>
           <div class="repair_right">
             <p class="article_header repair_header">Repairs Service</p>
               <p class="article_text repair_text">
@@ -110,29 +115,62 @@
 
         <article class=finance_article>
           <div class="finance_left">
-            <p class="article_header finance_header">Finance Service</p>
-              <p class="article_text finance_text">
-                If you want to place a business order for over $10,000 and need finance we can help!
-                <br>
-                Our store is also a registered and audited loans provider accredited by the bank of technological dreams.
-                <br>
-                For this service you will need to arrange an appointment with our finance team for a consultation.
-                <br>
-                You will need to provide some personal and financial details so that we can check your eligibility for such a sizable loan.
-                <br>
-                Upon succesful completion of the consultation you will be presented with an agreement to sign.
-                <br>
-                To arrange an appointment with our team use the button below to access or appointments booking page. 
-              </p>
-              <button class="appointment_button" type="button">Book an Appointment</button>
+            <p class="article_header finance_header">
+              Finance Service
+            </p>
+            <p class="article_text finance_text">
+              If you want to place a business order for over $10,000 and need finance we can help!
+              <br>
+              Our store is also a registered and audited loans provider accredited by the bank of technological dreams.
+              <br>
+              For this service you will need to arrange an appointment with our finance team for a consultation.
+              <br>
+              You will need to provide some personal and financial details so that we can check your eligibility for such a sizable loan.
+              <br>
+              Upon succesful completion of the consultation you will be presented with an agreement to sign.
+              <br>
+              To arrange an appointment with our team use the button below to access our appointments booking page. 
+            </p>
+            <button class="appointment_button" type="button">
+              Book an Appointment
+            </button>
           </div>
-          <img src="../imges/money.jpg" alt="A pile of money">
+          <div class="img_border">
+            <img src="../imges/money.jpg" alt="A pile of money">
+          </div>
+        </article>
+
+        <article class="aftercare_article">
+          <div class="img_border">
+            <img
+            src="../imges/aftercare.jpg"
+            alt="A pristine keyboard and a polished screen showing with a colourful screensaver"
+          >
+          </div>
+          <div class="aftercare_right">
+            <p class="article_header aftercare_header">
+              Aftercare Service
+            </p>
+            <p class="article_text aftercare_text">
+              Would you like to have a team of hardware and software specialists available when you need them to repair, reconfigure or reprogram your bespoke custom pc?
+              <br>
+              Whether you are a busy professional that can't afford downtime on your devices or an e-sports gamer who needs their machine performing optimally all the time our aftercare service is for you.
+              <br>
+              Where parts are available, your repairs will be fast-tracked to our aftercare team who will ensure your pc is in and out of the shop within 12 hours.
+              <br>
+              A premium home service option is also available where a technician will travel up to 20 miles to perform software configuration and hardware updates to your machine at your home.
+              <br>
+              If you need our aftercare service simply pop into the store and ask to chat to the aftercare team.
+              <br>
+              Again, you can phone <strong> +1212121234567876543 </strong> to chat to our staff to arrange an aftercare plan over the phone. 
+            </p>
+          </div>
         </article>
       </section>
     </main>
 
     <footer id="footer">
-      <a href="#header">Back to top</a>
+      <a href="#services">Back to top</a>
       <p class="footer_text">Copyright ©️</p>
     </footer>
   </body>
