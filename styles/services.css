@@ -169,18 +169,50 @@ figure.services_left{
   height: auto;
   background-color: var(--grey-blue);
   color: var(--dark);
+  padding: 2rem;
 } 
 
 #services_details article {
   display: flex;
+  align-items: center;
   padding: 2rem;
   gap: 2rem;
 }
 
 #services_details article img{
-  width: 25vw;
-  height: 25vw;
+  width: 20rem;
+  height: 20rem;
   border-radius: 1rem;
+  margin: 2rem;
+  z-index: 10;
+}
+
+.img_border{
+  width: 21rem;
+  height: 21rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  z-index: 5;
+  background-color: var(--cta-bg-color);
+}
+
+#services_details .finance_left{
+  display: flex;
+  flex-direction: column;
+}
+
+button.appointment_button{
+  margin: 2rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  align-self: flex-end;
+  font-size: var(--small-text-size);
+  background-color: var(--dark);
+  color: var(--grey-blue);
+}
+
+button.appointment_button:hover{
+  background-color: var(--cta-bg-color);
 }
 
 .article_header{
@@ -248,8 +280,17 @@ figure.services_left{
   }
 
   #services_details article img{
-    height: 250px;
-    width: 250px;
+    height: 16rem;
+    width: 16rem;
+  }
+
+  
+  .img_border{
+    width: 17rem;
+    height: 17rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    background-color: var(--cta-bg-color);
   }
 
   .article_header{
@@ -303,6 +344,11 @@ figure.services_left{
   #services_details article img{
   display: none;
   }
+
+  
+.img_border{
+  display: none;
+}
 
   .article_header{
     font-size: var(--medium-text-size);
@@ -374,12 +420,16 @@ figure.services_left{
     gap: 2rem;
   }
 
-
   #services_details article img{
-    height: 300px;
-    width: 300px;
-    align-self: center;
+    height: 13rem;
+    width: 13rem;
   }
+  
+  .img_border{
+    width: 14rem;
+    height: 14rem;
+  }
+  
 
   .article_header{
     font-size: var(--medium-text-size);
@@ -455,9 +505,13 @@ figure.services_left{
 
 
 #services_details article img{
-  height: 300px;
-  width: 300px;
-  align-self: center;
+  height: 13rem;
+  width: 13rem;
+}
+
+.img_border{
+  width: 14rem;
+  height: 14rem;
 }
 
 .article_header{
