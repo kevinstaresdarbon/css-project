@@ -1,1 +1,83 @@
-@import url("../styles/index.css"); /*header styles add from index.css*/
+ /* @import url("../styles/index.css"); header styles add from index.css */
+
+ /* These global variables attached to the root element are included here for theming according to the assignment outline */
+
+:root {
+  --dark: #1f2937; /* Hero and Footer background, Information Header text and Quote text */
+  --grey-blue: #e5e7eb; /* Quote Section bg color, Hero Secondary text and Header Link text */
+  --light: #f9faf8; /* Hero text and Logo text */
+  --cta-bg-color: #3882f6; /* Use as the CTA button color too  */
+
+  --extra-large-text-size: 48px; /*  Hero Header text */
+  --large-text-size: 36px; /*  Information Header text and Quote text */
+  --medium-text-size: 24px; /*  Header Logo text */
+  --small-text-size: 18px; /*  Hero Secondary and Header Link text */
+
+  --extra-bold: 800; /*  Font-weight for Hero Main and Information Header text */
+  --lightWeight: 300; /*  Font-weight for Quote text, use with "font-style: italic" for the Quote text */
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assits/fonts/Roboto-Regular.ttf") format("truetype"),
+    url("../assits/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* header styles */
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--dark);
+  padding: 1.5rem;
+  height: auto;
+}
+
+.main_nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 20rem;
+}
+
+.header_logo a {
+  font-size: var(--medium-text-size);
+  color: var(--light);
+  font-weight: var(--extra-bold);
+  text-decoration: none;
+}
+
+.nav_links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 2rem;
+}
+
+.nav_links a {
+  text-decoration: none;
+  color: var(--grey-blue);
+  font-size: var(--small-text-size);
+}
+
+.nav_links a:hover {
+  color: var(--cta-bg-color);
+}
+
+.nav_links a.current{
+  color: grey;
+}
+
+/* end of header styles */
