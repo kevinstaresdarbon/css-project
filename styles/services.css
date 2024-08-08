@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("../assits/fonts/Roboto-Regular.ttf") format("truetype"),
-    url("../assits/fonts/Roboto-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype"),
+  url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -93,7 +93,7 @@ body {
   justify-content: space-around;
   align-items: center;
   height: calc(100vh - 76px);
-  background-image: url(../imges/jpeg-optimizer_Home.png);
+  background-image: url(../assets/images/services_images/services_bg.png);
   background-repeat: no-repeat;
   background-size: 100vw calc(100vh - 76px);
 }
