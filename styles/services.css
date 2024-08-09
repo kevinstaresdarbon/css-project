@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("../assits/fonts/Roboto-Regular.ttf") format("truetype"),
-    url("../assits/fonts/Roboto-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype"),
+  url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -69,6 +69,8 @@ body {
   text-decoration: none;
   color: var(--grey-blue);
   font-size: var(--small-text-size);
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .nav_links a:hover {
@@ -90,8 +92,8 @@ body {
   display:flex;
   justify-content: space-around;
   align-items: center;
-  height: calc(100vh - 76px);
-  background-image: url(../imges/jpeg-optimizer_Home.png);
+  height: calc(100vh - 77px);
+  background-image: url(../assets/images/services_images/services_bg.png);
   background-repeat: no-repeat;
   background-size: 100vw calc(100vh - 76px);
 }
@@ -209,6 +211,8 @@ button.appointment_button{
   font-size: var(--small-text-size);
   background-color: var(--dark);
   color: var(--grey-blue);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button.appointment_button:hover{
@@ -240,6 +244,8 @@ button.appointment_button:hover{
   text-decoration: none;
   color: var(--light);
   margin-bottom: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 #footer a:hover{
@@ -249,7 +255,7 @@ button.appointment_button:hover{
 /* end of footer styles */
 /* end of styles for desktop */
 /* media queries */
-@media (min-width: 901px) and (max-width: 1050px) {
+@media (min-width: 901px) and (max-width: 1250px) {
 
   #services{
     height: 40rem;

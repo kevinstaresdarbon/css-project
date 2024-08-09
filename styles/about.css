@@ -16,8 +16,8 @@
 
 @font-face {
 font-family: "Roboto";
-src: url("../assits/fonts/Roboto-Regular.ttf") format("truetype"),
-    url("../assits/fonts/Roboto-Bold.ttf") format("truetype");
+src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype"),
+    url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
 font-weight: normal;
 font-style: normal;
 }
@@ -67,6 +67,8 @@ margin-right: 2rem;
 text-decoration: none;
 color: var(--grey-blue);
 font-size: var(--small-text-size);
+cursor: pointer;
+transition: color 0.3s ease;
 }
 
 .nav_links a:hover {
