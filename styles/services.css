@@ -92,7 +92,7 @@ body {
   display:flex;
   justify-content: space-around;
   align-items: center;
-  height: calc(100vh - 76px);
+  height: calc(100vh - 77px);
   background-image: url(../assets/images/services_images/services_bg.png);
   background-repeat: no-repeat;
   background-size: 100vw calc(100vh - 76px);
@@ -255,7 +255,7 @@ button.appointment_button:hover{
 /* end of footer styles */
 /* end of styles for desktop */
 /* media queries */
-@media (min-width: 901px) and (max-width: 1050px) {
+@media (min-width: 901px) and (max-width: 1250px) {
 
   #services{
     height: 40rem;
