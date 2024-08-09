@@ -231,6 +231,9 @@ button.appointment_button:hover{
 /* end of services styles */
 /*footer styles */
 #footer {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--dark);
   color: var(--light);
   text-align: center;
@@ -243,14 +246,25 @@ button.appointment_button:hover{
   display: block;
   text-decoration: none;
   color: var(--light);
-  margin-bottom: 1rem;
+  margin: 1rem;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 #footer a:hover{
-  color: var(--cta-bg-color)
+  color: var(--cta-bg-color);
 }
+
+#footer p {
+  color: var(--light);
+  margin: 1rem;
+}
+
+#footer hr{
+  width: 300px;
+}
+/* End of footer styles */
+
 
 /* end of footer styles */
 /* end of styles for desktop */
