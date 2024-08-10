@@ -14,7 +14,7 @@ If you wish to work on the files for this project you can clone it onto your mac
 
 ``` Git clone command ```
 ```
-git@github.com:kevinstaresdarbon/css-project.git
+git clone git@github.com:kevinstaresdarbon/css-project.git
 ```
 
 if you simply wish to view the page you can use this link: 
