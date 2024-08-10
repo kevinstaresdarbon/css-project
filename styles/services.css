@@ -4,7 +4,6 @@
   --dark: #1f2937; /* Hero and Footer background, Information Header text and Quote text */
   --grey-blue: #e5e7eb; /* Quote Section bg color, Hero Secondary text and Header Link text */
   --light: #f9faf8; /* Hero text and Logo text */
-  --silverish: rgb(194, 203, 206);  /* Service Text and Tagline */
   --cta-bg-color: #3882f6; /* Use as the CTA button color too  */
 
   --extra-large-text-size: 48px; /*  Hero Header text */
@@ -18,10 +17,22 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype"),
-  url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
 }
 
 * {
@@ -126,7 +137,7 @@ figure.services_left{
 }
 
 .tagline{
-  color: var(--silverish);
+  color: var(--light);
   font-size: var(--medium-text-size);
   margin: 1rem;
 }
