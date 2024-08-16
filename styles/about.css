@@ -121,12 +121,15 @@ color: grey;
     color: var(--cta-bg-color);
     margin-bottom: 1rem;
 }
-.about figcaption{
+.about figcaption {
     font-size: var(--medium-text-size);
     letter-spacing: 1px;
     padding: 2rem;
-   
+    line-height: 1.6; /* Increases line spacing for readability */
+    max-width: 800px; /* Limits the width for easier reading */
+    margin: 0 auto; /* Centers the text block within its container */
 }
+
 .about img{
     width: 35%;
     height: auto;
@@ -147,10 +150,14 @@ color: grey;
     align-items: center;
 }
 .contact figcaption{
+    color: var(--cta-bg-color);
     font-size: var(--medium-text-size);
     letter-spacing: 1px;
-    color: var(--cta-bg-color);
     padding: 2rem;
+    line-height: 1.6; /* Increases line spacing for readability */
+    max-width: 800px; /* Limits the width for easier reading */
+    margin: 0 auto;
+ 
 }
 .contact figcaption h2{
     color: var(--light);
@@ -179,8 +186,11 @@ color: grey;
 }
 .our_goals figcaption{
     font-size: var(--medium-text-size);
-    padding: 2rem;
     letter-spacing: 1px;
+    padding: 2rem;
+    line-height: 1.6; /* Increases line spacing for readability */
+    max-width: 800px; /* Limits the width for easier reading */
+    margin: 0 auto;
 
 }
 .our_goals figcaption h2{
@@ -277,6 +287,11 @@ color: grey;
 
     figcaption {
         padding: 1rem;
+        letter-spacing: 1px;
+        line-height: 1.6; /* Increases line spacing for readability */
+        max-width: 800px; /* Limits the width for easier reading */
+        margin: 0 auto;
+
     }
 }
 
