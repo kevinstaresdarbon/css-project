@@ -1,18 +1,28 @@
 /* These global variables attached to the root element are included here for theming according to the assignment outline */
 
 :root {
-  --dark: #1f2937; /* Hero and Footer background, Information Header text and Quote text */
-  --grey-blue: #e5e7eb; /* Quote Section bg color, Hero Secondary text and Header Link text */
-  --light: #f9faf8; /* Hero text and Logo text */
-  --cta-bg-color: #3882f6; /* Use as the CTA button color too  */
+  --dark: #1f2937;
+  /* Hero and Footer background, Information Header text and Quote text */
+  --grey-blue: #e5e7eb;
+  /* Quote Section bg color, Hero Secondary text and Header Link text */
+  --light: #f9faf8;
+  /* Hero text and Logo text */
+  --cta-bg-color: #3882f6;
+  /* Use as the CTA button color too  */
 
-  --extra-large-text-size: 48px; /*  Hero Header text */
-  --large-text-size: 36px; /*  Information Header text and Quote text */
-  --medium-text-size: 24px; /*  Header Logo text */
-  --small-text-size: 18px; /*  Hero Secondary and Header Link text */
+  --extra-large-text-size: 48px;
+  /*  Hero Header text */
+  --large-text-size: 36px;
+  /*  Information Header text and Quote text */
+  --medium-text-size: 24px;
+  /*  Header Logo text */
+  --small-text-size: 18px;
+  /*  Hero Secondary and Header Link text */
 
-  --extra-bold: 800; /*  Font-weight for Hero Main and Information Header text */
-  --lightWeight: 300; /*  Font-weight for Quote text, use with "font-style: italic" for the Quote text */
+  --extra-bold: 800;
+  /*  Font-weight for Hero Main and Information Header text */
+  --lightWeight: 300;
+  /*  Font-weight for Quote text, use with "font-style: italic" for the Quote text */
 }
 
 @font-face {
@@ -44,6 +54,7 @@
 body {
   font-family: "Roboto", sans-serif;
 }
+
 /* styles for desktop */
 /* header styles */
 #header {
@@ -88,111 +99,118 @@ body {
   color: var(--cta-bg-color);
 }
 
-.nav_links a.current{
+.nav_links a.current {
   color: grey;
 }
 
 /* end of header styles */
 
-#top{
-  height:77px;
-}
-
 /* services styles */
-#services{
-  display:flex;
+#services {
+  display: flex;
   justify-content: space-around;
-  align-items: center;
-  height: calc(100vh - 77px);
+  align-items: flex-start;
+  margin-top: 77px;
+  height: auto;
   background-image: url(../assets/images/services_images/services_bg.png);
   background-repeat: no-repeat;
-  background-size: 100vw calc(100vh - 76px);
+  background-size: 100vw auto;
 }
 
-figure.services_left{
+.services_greeting {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-top: 3rem;
-  max-width: 25rem;
-  align-self: flex-start;
+  margin: 3rem 2rem 3rem 2rem;
   background-color: var(--dark);
   border-radius: 1rem;
-  width: 24rem;
+  width: 36rem;
+  height: auto;
 }
 
-.services_left img{
+.services_main_figure img {
   border-radius: 1rem;
-  width:22rem;
+  width: 32rem;
   margin-bottom: 1rem;
 }
 
-.services_header{
+.services_header {
   font-size: var(--extra-large-text-size);
   font-weight: var(--extra-bold);
   color: var(--light);
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.tagline{
+.tagline {
   color: var(--light);
   font-size: var(--medium-text-size);
-  margin: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  width: inherit;
 }
 
-.services_right{
+.services_right {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   max-width: 35rem;
-  margin-right: 10rem;
+  margin: 3rem 0 0 2rem;
+  padding-bottom: 3rem;
   padding-top: 1rem;
-  background-color: var(--dark);
-  border-radius: 1rem;
 }
 
-.service_item{
+.service_item {
   display: flex;
   align-items: flex-start;
   margin-bottom: 1.5rem;
+  background-color: var(--dark);
+  border-radius: 1rem;
+  padding: 1rem 0 1rem 0;
 }
 
-.service_number{
+.service_number {
   font-size: var(--large-text-size);
   color: var(--light);
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.service_header{
+.service_header {
   font-size: var(--medium-text-size);
   color: var(--light);
   margin-bottom: 0.5rem;
+  text-align: start;
 }
 
-.service_text{
+.service_text {
   font-size: var(--small-text-size);
   color: rgb(194, 203, 206);
   padding-right: 2rem;
+  text-align: justify;
 }
+
 /* services_details styles */
-#services_details{
+#services_details {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
   height: auto;
   background-color: var(--grey-blue);
   color: var(--dark);
-  padding: 2rem;
-} 
+  padding: 2rem 4vw 2rem 4vw;
+}
 
 #services_details article {
   display: flex;
   align-items: center;
-  padding: 2rem;
+  max-width: 80rem;
   gap: 2rem;
 }
 
-#services_details article img{
+#services_details article img {
   width: 20rem;
   height: 20rem;
   border-radius: 1rem;
@@ -200,7 +218,7 @@ figure.services_left{
   z-index: 10;
 }
 
-.img_border{
+.img_border {
   width: 21rem;
   height: 21rem;
   margin: 2rem;
@@ -209,12 +227,16 @@ figure.services_left{
   background-color: var(--cta-bg-color);
 }
 
-#services_details .finance_left{
+.article_text {
+  width: 40rem;
+}
+
+#services_details .finance_left {
   display: flex;
   flex-direction: column;
 }
 
-button.appointment_button{
+button.appointment_button {
   margin: 2rem;
   padding: 1.5rem;
   border-radius: 1rem;
@@ -226,23 +248,40 @@ button.appointment_button{
   transition: background-color 0.3s ease;
 }
 
-button.appointment_button:hover{
+button.appointment_button:hover {
   background-color: var(--cta-bg-color);
 }
 
-.article_header{
+.article_header {
   font-size: var(--large-text-size);
   font-weight: var(--extra-bold);
   margin-bottom: 2rem;
 }
 
-.article_text{
+.article_text {
   font-size: var(--medium-text-size);
+  text-align: justify;
 }
+
+.repair_article {
+  align-self: flex-start;
+  margin-left: 5vw;
+}
+
+.finance_article {
+  align-self: flex-end;
+  margin-right:5vw;
+}
+
+.aftercare_article {
+  align-self: flex-start;
+  margin-left: 5vw;
+}
+
 /* end of services styles */
 /*footer styles */
 #footer {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--dark);
@@ -253,7 +292,7 @@ button.appointment_button:hover{
   font-size: var(--small-text-size);
 }
 
-#footer a{
+#footer a {
   display: block;
   text-decoration: none;
   color: var(--light);
@@ -262,7 +301,7 @@ button.appointment_button:hover{
   transition: color 0.3s ease;
 }
 
-#footer a:hover{
+#footer a:hover {
   color: var(--cta-bg-color);
 }
 
@@ -271,52 +310,63 @@ button.appointment_button:hover{
   margin: 1rem;
 }
 
-#footer hr{
+#footer hr {
   width: 300px;
 }
-/* End of footer styles */
-
 
 /* end of footer styles */
 /* end of styles for desktop */
 /* media queries */
 @media (min-width: 901px) and (max-width: 1250px) {
 
-  #services{
-    height: 40rem;
-    align-items: space-around;
-    background-size: 100vw 50rem;
+  #services {
+    height: auto;
+    justify-content: space-around;
+    background-size: 100vw auto;
+    object-fit: fill;
+    background-image: url(../assets/images/services_images/services_tablet_bg.png);
   }
 
-  figure.services_left{
-    align-self: flex-start;
-    margin-top: 2rem;
+  .services_greeting {
     width: 25rem;
+    min-width: 25rem;
   }
 
-  .services_left img{
-    width: 20rem;
+  .services_main_figure {
+    margin-top: 2rem;
+    width: 23rem;
+    min-width: 23rem;
   }
 
-  .services_right{
+  .services_main_figure img {
+    width: 23rem;
+  }
+
+  .services_right {
     padding-left: 0;
-    padding-top: 0;
+    padding-top: 1rem;
     margin-right: 2rem;
     margin-top: 2rem;
+    padding-bottom: 0;
     align-self: flex-start;
   }
 
-  .service_text{
+  .service_text {
     padding-right: 1rem;
   }
 
-  #services_details article img{
-    height: 16rem;
-    width: 16rem;
+  #services_details {
+    padding: 2rem 2rem 2rem 2rem;
   }
 
-  
-  .img_border{
+  #services_details article img {
+    height: 16rem;
+    width: 16rem;
+    margin: 2rem 2rem 2rem 2rem;
+  }
+
+
+  .img_border {
     width: 17rem;
     height: 17rem;
     margin: 2rem;
@@ -324,75 +374,118 @@ button.appointment_button:hover{
     background-color: var(--cta-bg-color);
   }
 
-  .article_header{
+  .article_header {
     font-size: var(--medium-text-size);
     font-weight: var(--extra-bold);
     margin-bottom: 2rem;
   }
-  
-  .article_text{
+
+  .article_text {
     font-size: var(--small-text-size);
+    width: 30rem;
+  }
+
+  .repair_article{
+    margin-left: 0;
+  }
+
+  .finance_article {
+    margin-right: 0;
+  }
+
+  .aftercare_article{
+    margin-left: 0;
   }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
- 
+
   .main_nav {
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
   }
 
-  #services{
+  #services {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 70rem;
-    background-size: 100vw 70rem;
+    height: auto;
+    background-size: 100vw auto;
+    background-image: url(../assets/images/services_images/services_mobile_bg.png);
   }
 
-  figure.services_left{
+  .services_greeting {
+    width: 27rem;
+    min-width: 27rem;
+  }
+
+  .services_main_figure {
     align-self: center;
-    width: 60rem;
+    width: 23rem;
     margin-top: 2rem;
+    padding: 0;
   }
 
-  .services_left img{
-    width: 22rem;
+  .services_main_figure img {
+    width: 23rem;
   }
 
-  .services_right{
+  .services_right {
     padding-left: 0;
     margin-left: 1rem;
     margin-right: 1rem;
   }
 
-  .service_text{
+  .service_text {
     padding-right: 1rem;
   }
 
-  
-  #services_details article img{
-  display: none;
+  article {
+    margin: 1rem 0 1rem 0;
   }
 
-  
-.img_border{
-  display: none;
-}
 
-  .article_header{
+  #services_details article img {
+    display: none;
+  }
+
+
+  .img_border {
+    display: none;
+  }
+
+  .article_header {
     font-size: var(--medium-text-size);
     font-weight: var(--extra-bold);
     margin-bottom: 2rem;
   }
-  
-  .article_text{
+
+  .article_text {
     font-size: var(--small-text-size);
+    width: 32rem;
+  }
+
+  .repair_article {
+    align-self: center;
+    padding: 0;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .finance_article{
+    align-self: center;
+    padding: 0;
+    margin: 1rem 0 1rem 0;
+  }
+
+  .aftercare_article{
+    align-self: center;
+    padding: 0;
+    margin: 1rem 0 1rem 0;
   }
 }
 
-@media (min-width: 346px) and (max-width: 599px){
+@media (max-width: 599px) {
   .main_nav {
     flex-direction: row;
     align-items: center;
@@ -404,37 +497,41 @@ button.appointment_button:hover{
     gap: 0.5rem;
   }
 
-  #top{
-    height: 130px;
-  }
-
-  #services{
+  #services {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    margin-top: 130px;
     height: 82rem;
     background-size: 100vw 82rem;
+    background-image: url(../assets/images/services_images/services_mobile_bg.png);
   }
 
-  figure.services_left{
-    width: calc(100vw - 2rem);
-    margin-bottom: 1rem;
-    margin-top: 0;
+  .services_greeting {
+    width: 22rem;
+    min-width: 22rem;
+  }
+
+  .services_main_figure {
     align-self: center;
+    width: 20rem;
+    margin-top: 2rem;
   }
 
-  .services_left img{
-    width: 18rem;
+  .services_main_figure img {
+    width: 20rem;
   }
 
- 
-  .services_right{
+
+
+  .services_right {
     padding-left: 0;
     margin-left: 1rem;
     margin-right: 1rem;
   }
 
-  .service_text{
+  .service_text {
     padding-right: 1rem;
   }
 
@@ -443,115 +540,51 @@ button.appointment_button:hover{
     flex-direction: column;
     padding: 2rem;
     gap: 2rem;
-  } 
+  }
 
-  #services_details .finance_article{
+  #services_details .finance_article {
     flex-direction: column-reverse;
     padding: 2rem;
     gap: 2rem;
   }
 
-  #services_details article img{
+  #services_details article img {
     height: 13rem;
     width: 13rem;
   }
-  
-  .img_border{
+
+  .img_border {
     width: 14rem;
     height: 14rem;
   }
-  
 
-  .article_header{
+
+  .article_header {
     font-size: var(--medium-text-size);
     font-weight: var(--extra-bold);
     margin-bottom: 2rem;
   }
-  
-  .article_text{
+
+  .article_text {
     font-size: var(--small-text-size);
+    width: 20rem;
   }
-}
 
-/* specifically for galaxy z-fold support! */
-@media (max-width: 345px){
-.main_nav {
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem;
-}
+  .repair_article {
+    align-self: center;
+    width: 19rem;
+    margin: 0;
+  }
 
-.nav_links {
-  flex-direction: column;
-  gap: 0.5rem;
-}
+  .finance_article {
+    align-self: center;
+    width: 19rem;
+    margin: 0;
+  }
 
-#top{
-  height: 130px;
-}
-
-#services{
-  flex-direction: column;
-  justify-content: space-around;
-  height: 90rem;
-  background-size: 100vw 90rem;
-}
-
-figure.services_left{
-  width: calc(100vw - 2rem);
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  margin-bottom: 1rem;
-  margin-top: 0;
-  align-self: center;
-}
-
-.services_left img{
-  width: 18rem;
-}
-
-
-.services_right{
-  padding-left: 0;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.service_text{
-  padding-right: 1rem;
-}
-
-#services_details article {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  gap: 2rem;
-} 
-
-#services_details .finance_article{
-  flex-direction: column-reverse;
-  padding: 2rem;
-  gap: 2rem;
-}
-
-
-#services_details article img{
-  height: 13rem;
-  width: 13rem;
-}
-
-.img_border{
-  width: 14rem;
-  height: 14rem;
-}
-
-.article_header{
-  font-size: var(--medium-text-size);
-  font-weight: var(--extra-bold);
-  margin-bottom: 2rem;
-}
-
-.article_text{
-  font-size: var(--small-text-size);
-}
+  .aftercare_article{
+    align-self: center;
+    width: 19rem;
+    margin: 0;
+  }
 }
