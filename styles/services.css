@@ -112,9 +112,10 @@ body {
   align-items: flex-start;
   margin-top: 77px;
   height: auto;
+  width: 100%;
   background-image: url(../assets/images/services_images/services_bg.png);
   background-repeat: no-repeat;
-  background-size: 100vw auto;
+  background-size: 100% auto;
 }
 
 .services_greeting {
@@ -157,14 +158,13 @@ body {
   justify-content: flex-start;
   max-width: 35rem;
   margin: 3rem 0 0 2rem;
-  padding-bottom: 3rem;
   padding-top: 1rem;
 }
 
 .service_item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   background-color: var(--dark);
   border-radius: 1rem;
   padding: 1rem 0 1rem 0;
@@ -195,8 +195,8 @@ body {
 #services_details {
   display:flex;
   flex-direction: column;
-  align-items: center;
-  width: 100vw;
+  align-items: flex-start;
+  width: 100%;
   height: auto;
   background-color: var(--grey-blue);
   color: var(--dark);
@@ -206,8 +206,7 @@ body {
 #services_details article {
   display: flex;
   align-items: center;
-  max-width: 80rem;
-  gap: 2rem;
+  padding: 0 2rem 0 2rem;
 }
 
 #services_details article img {
@@ -225,10 +224,6 @@ body {
   border-radius: 1rem;
   z-index: 5;
   background-color: var(--cta-bg-color);
-}
-
-.article_text {
-  width: 40rem;
 }
 
 #services_details .finance_left {
@@ -259,23 +254,24 @@ button.appointment_button:hover {
 }
 
 .article_text {
-  font-size: var(--medium-text-size);
+  width: 40rem;
+  font-size: var(--small-text-size);
   text-align: justify;
 }
 
 .repair_article {
   align-self: flex-start;
-  margin-left: 5vw;
+  margin-left: 3vw;
 }
 
 .finance_article {
   align-self: flex-end;
-  margin-right:5vw;
+  margin-right:3vw;
 }
 
 .aftercare_article {
   align-self: flex-start;
-  margin-left: 5vw;
+  margin-left: 3vw;
 }
 
 /* end of services styles */
@@ -349,6 +345,7 @@ button.appointment_button:hover {
     margin-top: 2rem;
     padding-bottom: 0;
     align-self: flex-start;
+    font-size: var(--small-text-size);
   }
 
   .service_text {
@@ -356,7 +353,8 @@ button.appointment_button:hover {
   }
 
   #services_details {
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 2rem 0rem 2rem 0rem;
+    width: 100%;
   }
 
   #services_details article img {
@@ -401,7 +399,6 @@ button.appointment_button:hover {
 @media (min-width: 601px) and (max-width: 900px) {
 
   .main_nav {
-    flex-direction: row;
     align-items: center;
     gap: 0.5rem;
   }
@@ -411,7 +408,10 @@ button.appointment_button:hover {
     align-items: center;
     justify-content: space-around;
     height: auto;
-    background-size: 100vw auto;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    background-size: 100% auto;
     background-image: url(../assets/images/services_images/services_mobile_bg.png);
   }
 
@@ -445,11 +445,14 @@ button.appointment_button:hover {
     margin: 1rem 0 1rem 0;
   }
 
+  #services_details{
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   #services_details article img {
     display: none;
   }
-
 
   .img_border {
     display: none;
@@ -483,6 +486,12 @@ button.appointment_button:hover {
     padding: 0;
     margin: 1rem 0 1rem 0;
   }
+
+  #footer{
+    width: 100%;
+    padding-right: 0;
+    padding-left:0;
+  }
 }
 
 @media (max-width: 599px) {
@@ -503,14 +512,17 @@ button.appointment_button:hover {
     justify-content: space-around;
     align-items: center;
     margin-top: 130px;
-    height: 82rem;
-    background-size: 100vw 82rem;
+    margin-left: 0;
+    margin-right: 0;
+    height: 84rem;
+    background-size: 100vw 84rem;
     background-image: url(../assets/images/services_images/services_mobile_bg.png);
   }
 
   .services_greeting {
     width: 22rem;
     min-width: 22rem;
+    margin-bottom: 0rem;
   }
 
   .services_main_figure {
