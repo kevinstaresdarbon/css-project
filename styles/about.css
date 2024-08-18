@@ -178,7 +178,6 @@ color: grey;
     justify-content: center;
     background-color:var(--light);
     padding: 2rem;
-    margin-top: 4rem;
 }
 .our_goals{
     display: flex;
@@ -270,11 +269,12 @@ color: grey;
     .about,
     .contact,
     .our_goals {
-        flex-direction: column;
+        flex-direction: column;   
         text-align: center;
     }
 
     .about img {
+        
         width: 60%;
         margin-top: 4rem;
         display: block; /* Ensure the About section image is visible */
@@ -287,9 +287,6 @@ color: grey;
 
     figcaption {
         padding: 1rem;
-        letter-spacing: 1px;
-        line-height: 1.6; /* Increases line spacing for readability */
-        max-width: 800px; /* Limits the width for easier reading */
         margin: 0 auto;
 
     }
@@ -307,5 +304,6 @@ color: grey;
 
     figcaption {
         font-size: var(--small-text-size);
+        line-height: 0;
     }
 }
