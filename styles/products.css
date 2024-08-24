@@ -360,9 +360,14 @@ body {
   background-color: var(--dark);
   color: var(--light);
   text-align: center;
-  padding: 1.5rem;
+  padding: 0.5rem;
   height: auto;
   font-size: var(--small-text-size);
+}
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #footer a {

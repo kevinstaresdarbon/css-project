@@ -88,19 +88,19 @@ body {
   color: var(--cta-bg-color);
 }
 
-.nav_links a.current{
+.nav_links a.current {
   color: grey;
 }
 
 /* end of header styles */
 
-#top{
-  height:77px;
+#top {
+  height: 77px;
 }
 
 /* services styles */
-#services{
-  display:flex;
+#services {
+  display: flex;
   justify-content: space-around;
   align-items: center;
   height: calc(100vh - 77px);
@@ -109,7 +109,7 @@ body {
   background-size: 100vw calc(100vh - 76px);
 }
 
-figure.services_left{
+figure.services_left {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -123,26 +123,26 @@ figure.services_left{
   width: 24rem;
 }
 
-.services_left img{
+.services_left img {
   border-radius: 1rem;
-  width:22rem;
+  width: 22rem;
   margin-bottom: 1rem;
 }
 
-.services_header{
+.services_header {
   font-size: var(--extra-large-text-size);
   font-weight: var(--extra-bold);
   color: var(--light);
   margin-bottom: 1rem;
 }
 
-.tagline{
+.tagline {
   color: var(--light);
   font-size: var(--medium-text-size);
   margin: 1rem;
 }
 
-.services_right{
+.services_right {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -153,37 +153,37 @@ figure.services_left{
   border-radius: 1rem;
 }
 
-.service_item{
+.service_item {
   display: flex;
   align-items: flex-start;
   margin-bottom: 1.5rem;
 }
 
-.service_number{
+.service_number {
   font-size: var(--large-text-size);
   color: var(--light);
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.service_header{
+.service_header {
   font-size: var(--medium-text-size);
   color: var(--light);
   margin-bottom: 0.5rem;
 }
 
-.service_text{
+.service_text {
   font-size: var(--small-text-size);
   color: rgb(194, 203, 206);
   padding-right: 2rem;
 }
 /* services_details styles */
-#services_details{
+#services_details {
   height: auto;
   background-color: var(--grey-blue);
   color: var(--dark);
   padding: 2rem;
-} 
+}
 
 #services_details article {
   display: flex;
@@ -192,7 +192,7 @@ figure.services_left{
   gap: 2rem;
 }
 
-#services_details article img{
+#services_details article img {
   width: 20rem;
   height: 20rem;
   border-radius: 1rem;
@@ -200,7 +200,7 @@ figure.services_left{
   z-index: 10;
 }
 
-.img_border{
+.img_border {
   width: 21rem;
   height: 21rem;
   margin: 2rem;
@@ -209,12 +209,12 @@ figure.services_left{
   background-color: var(--cta-bg-color);
 }
 
-#services_details .finance_left{
+#services_details .finance_left {
   display: flex;
   flex-direction: column;
 }
 
-button.appointment_button{
+button.appointment_button {
   margin: 2rem;
   padding: 1.5rem;
   border-radius: 1rem;
@@ -226,34 +226,38 @@ button.appointment_button{
   transition: background-color 0.3s ease;
 }
 
-button.appointment_button:hover{
+button.appointment_button:hover {
   background-color: var(--cta-bg-color);
 }
 
-.article_header{
+.article_header {
   font-size: var(--large-text-size);
   font-weight: var(--extra-bold);
   margin-bottom: 2rem;
 }
 
-.article_text{
+.article_text {
   font-size: var(--medium-text-size);
 }
 /* end of services styles */
 /*footer styles */
 #footer {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--dark);
   color: var(--light);
   text-align: center;
-  padding: 1.5rem;
+  padding: 0.5rem;
   height: auto;
   font-size: var(--small-text-size);
 }
-
-#footer a{
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer a {
   display: block;
   text-decoration: none;
   color: var(--light);
@@ -262,7 +266,7 @@ button.appointment_button:hover{
   transition: color 0.3s ease;
 }
 
-#footer a:hover{
+#footer a:hover {
   color: var(--cta-bg-color);
 }
 
@@ -271,34 +275,32 @@ button.appointment_button:hover{
   margin: 1rem;
 }
 
-#footer hr{
+#footer hr {
   width: 300px;
 }
 /* End of footer styles */
-
 
 /* end of footer styles */
 /* end of styles for desktop */
 /* media queries */
 @media (min-width: 901px) and (max-width: 1250px) {
-
-  #services{
+  #services {
     height: 40rem;
     align-items: space-around;
     background-size: 100vw 50rem;
   }
 
-  figure.services_left{
+  figure.services_left {
     align-self: flex-start;
     margin-top: 2rem;
     width: 25rem;
   }
 
-  .services_left img{
+  .services_left img {
     width: 20rem;
   }
 
-  .services_right{
+  .services_right {
     padding-left: 0;
     padding-top: 0;
     margin-right: 2rem;
@@ -306,17 +308,16 @@ button.appointment_button:hover{
     align-self: flex-start;
   }
 
-  .service_text{
+  .service_text {
     padding-right: 1rem;
   }
 
-  #services_details article img{
+  #services_details article img {
     height: 16rem;
     width: 16rem;
   }
 
-  
-  .img_border{
+  .img_border {
     width: 17rem;
     height: 17rem;
     margin: 2rem;
@@ -324,26 +325,25 @@ button.appointment_button:hover{
     background-color: var(--cta-bg-color);
   }
 
-  .article_header{
+  .article_header {
     font-size: var(--medium-text-size);
     font-weight: var(--extra-bold);
     margin-bottom: 2rem;
   }
-  
-  .article_text{
+
+  .article_text {
     font-size: var(--small-text-size);
   }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
- 
   .main_nav {
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
   }
 
-  #services{
+  #services {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -351,48 +351,46 @@ button.appointment_button:hover{
     background-size: 100vw 70rem;
   }
 
-  figure.services_left{
+  figure.services_left {
     align-self: center;
     width: 60rem;
     margin-top: 2rem;
   }
 
-  .services_left img{
+  .services_left img {
     width: 22rem;
   }
 
-  .services_right{
+  .services_right {
     padding-left: 0;
     margin-left: 1rem;
     margin-right: 1rem;
   }
 
-  .service_text{
+  .service_text {
     padding-right: 1rem;
   }
 
-  
-  #services_details article img{
-  display: none;
+  #services_details article img {
+    display: none;
   }
 
-  
-.img_border{
-  display: none;
-}
+  .img_border {
+    display: none;
+  }
 
-  .article_header{
+  .article_header {
     font-size: var(--medium-text-size);
     font-weight: var(--extra-bold);
     margin-bottom: 2rem;
   }
-  
-  .article_text{
+
+  .article_text {
     font-size: var(--small-text-size);
   }
 }
 
-@media (min-width: 346px) and (max-width: 599px){
+@media (min-width: 346px) and (max-width: 599px) {
   .main_nav {
     flex-direction: row;
     align-items: center;
@@ -404,11 +402,11 @@ button.appointment_button:hover{
     gap: 0.5rem;
   }
 
-  #top{
+  #top {
     height: 130px;
   }
 
-  #services{
+  #services {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -416,25 +414,24 @@ button.appointment_button:hover{
     background-size: 100vw 82rem;
   }
 
-  figure.services_left{
+  figure.services_left {
     width: calc(100vw - 2rem);
     margin-bottom: 1rem;
     margin-top: 0;
     align-self: center;
   }
 
-  .services_left img{
+  .services_left img {
     width: 18rem;
   }
 
- 
-  .services_right{
+  .services_right {
     padding-left: 0;
     margin-left: 1rem;
     margin-right: 1rem;
   }
 
-  .service_text{
+  .service_text {
     padding-right: 1rem;
   }
 
@@ -443,115 +440,112 @@ button.appointment_button:hover{
     flex-direction: column;
     padding: 2rem;
     gap: 2rem;
-  } 
+  }
 
-  #services_details .finance_article{
+  #services_details .finance_article {
     flex-direction: column-reverse;
     padding: 2rem;
     gap: 2rem;
   }
 
-  #services_details article img{
+  #services_details article img {
     height: 13rem;
     width: 13rem;
   }
-  
-  .img_border{
+
+  .img_border {
     width: 14rem;
     height: 14rem;
   }
-  
 
-  .article_header{
+  .article_header {
     font-size: var(--medium-text-size);
     font-weight: var(--extra-bold);
     margin-bottom: 2rem;
   }
-  
-  .article_text{
+
+  .article_text {
     font-size: var(--small-text-size);
   }
 }
 
 /* specifically for galaxy z-fold support! */
-@media (max-width: 345px){
-.main_nav {
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem;
-}
+@media (max-width: 345px) {
+  .main_nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
-.nav_links {
-  flex-direction: column;
-  gap: 0.5rem;
-}
+  .nav_links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-#top{
-  height: 130px;
-}
+  #top {
+    height: 130px;
+  }
 
-#services{
-  flex-direction: column;
-  justify-content: space-around;
-  height: 90rem;
-  background-size: 100vw 90rem;
-}
+  #services {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90rem;
+    background-size: 100vw 90rem;
+  }
 
-figure.services_left{
-  width: calc(100vw - 2rem);
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  margin-bottom: 1rem;
-  margin-top: 0;
-  align-self: center;
-}
+  figure.services_left {
+    width: calc(100vw - 2rem);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    align-self: center;
+  }
 
-.services_left img{
-  width: 18rem;
-}
+  .services_left img {
+    width: 18rem;
+  }
 
+  .services_right {
+    padding-left: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 
-.services_right{
-  padding-left: 0;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
+  .service_text {
+    padding-right: 1rem;
+  }
 
-.service_text{
-  padding-right: 1rem;
-}
+  #services_details article {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
 
-#services_details article {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  gap: 2rem;
-} 
+  #services_details .finance_article {
+    flex-direction: column-reverse;
+    padding: 2rem;
+    gap: 2rem;
+  }
 
-#services_details .finance_article{
-  flex-direction: column-reverse;
-  padding: 2rem;
-  gap: 2rem;
-}
+  #services_details article img {
+    height: 13rem;
+    width: 13rem;
+  }
 
+  .img_border {
+    width: 14rem;
+    height: 14rem;
+  }
 
-#services_details article img{
-  height: 13rem;
-  width: 13rem;
-}
+  .article_header {
+    font-size: var(--medium-text-size);
+    font-weight: var(--extra-bold);
+    margin-bottom: 2rem;
+  }
 
-.img_border{
-  width: 14rem;
-  height: 14rem;
-}
-
-.article_header{
-  font-size: var(--medium-text-size);
-  font-weight: var(--extra-bold);
-  margin-bottom: 2rem;
-}
-
-.article_text{
-  font-size: var(--small-text-size);
-}
+  .article_text {
+    font-size: var(--small-text-size);
+  }
 }
