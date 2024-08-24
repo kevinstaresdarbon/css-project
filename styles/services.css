@@ -193,7 +193,7 @@ body {
 
 /* services_details styles */
 #services_details {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
@@ -266,7 +266,7 @@ button.appointment_button:hover {
 
 .finance_article {
   align-self: flex-end;
-  margin-right:3vw;
+  margin-right: 3vw;
 }
 
 .aftercare_article {
@@ -283,11 +283,15 @@ button.appointment_button:hover {
   background-color: var(--dark);
   color: var(--light);
   text-align: center;
-  padding: 1.5rem;
+  padding: 0.5rem;
   height: auto;
   font-size: var(--small-text-size);
 }
-
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #footer a {
   display: block;
   text-decoration: none;
@@ -314,7 +318,6 @@ button.appointment_button:hover {
 /* end of styles for desktop */
 /* media queries */
 @media (min-width: 901px) and (max-width: 1250px) {
-
   #services {
     height: auto;
     justify-content: space-around;
@@ -363,7 +366,6 @@ button.appointment_button:hover {
     margin: 2rem 2rem 2rem 2rem;
   }
 
-
   .img_border {
     width: 17rem;
     height: 17rem;
@@ -383,7 +385,7 @@ button.appointment_button:hover {
     width: 30rem;
   }
 
-  .repair_article{
+  .repair_article {
     margin-left: 0;
   }
 
@@ -391,13 +393,12 @@ button.appointment_button:hover {
     margin-right: 0;
   }
 
-  .aftercare_article{
+  .aftercare_article {
     margin-left: 0;
   }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-
   .main_nav {
     align-items: center;
     gap: 0.5rem;
@@ -445,7 +446,7 @@ button.appointment_button:hover {
     margin: 1rem 0 1rem 0;
   }
 
-  #services_details{
+  #services_details {
     padding-left: 0;
     padding-right: 0;
   }
@@ -475,22 +476,22 @@ button.appointment_button:hover {
     margin: 2rem 0 1rem 0;
   }
 
-  .finance_article{
+  .finance_article {
     align-self: center;
     padding: 0;
     margin: 1rem 0 1rem 0;
   }
 
-  .aftercare_article{
+  .aftercare_article {
     align-self: center;
     padding: 0;
     margin: 1rem 0 1rem 0;
   }
 
-  #footer{
+  #footer {
     width: 100%;
     padding-right: 0;
-    padding-left:0;
+    padding-left: 0;
   }
 }
 
@@ -535,8 +536,6 @@ button.appointment_button:hover {
     width: 20rem;
   }
 
-
-
   .services_right {
     padding-left: 0;
     margin-left: 1rem;
@@ -570,7 +569,6 @@ button.appointment_button:hover {
     height: 14rem;
   }
 
-
   .article_header {
     font-size: var(--medium-text-size);
     font-weight: var(--extra-bold);
@@ -594,7 +592,7 @@ button.appointment_button:hover {
     margin: 0;
   }
 
-  .aftercare_article{
+  .aftercare_article {
     align-self: center;
     width: 19rem;
     margin: 0;
