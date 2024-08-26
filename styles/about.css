@@ -103,7 +103,13 @@ color: grey;
       transform: translateY(0);
     }
   }
+/* #container{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+    
 
+} */
 /* about section */
 #about_sec{
     display: flex;
@@ -115,19 +121,21 @@ color: grey;
 
 .about{
     display: flex;
+    justify-content: center;
+    gap: 10rem;
     align-items: center;
 }
 .about figcaption h2{
+    font-size: var(--large-text-size);
     color: var(--cta-bg-color);
     margin-bottom: 1rem;
 }
 .about figcaption {
     font-size: var(--medium-text-size);
-    letter-spacing: 1px;
-    padding: 2rem;
-    line-height: 1.6; /* Increases line spacing for readability */
-    max-width: 800px; /* Limits the width for easier reading */
-    margin: 0 auto; /* Centers the text block within its container */
+    /* letter-spacing: 1px; */
+    /* padding: 2rem; */
+    line-height: 1.5; /* Increases line spacing for readability */
+    max-width: 600px; 
 }
 
 .about img{
@@ -147,19 +155,21 @@ color: grey;
 }
 .contact{
     display: flex;
+    justify-content: center;
+    gap: 10rem;
     align-items: center;
 }
 .contact figcaption{
     color: var(--cta-bg-color);
     font-size: var(--medium-text-size);
-    letter-spacing: 1px;
-    padding: 2rem;
-    line-height: 1.6; /* Increases line spacing for readability */
-    max-width: 800px; /* Limits the width for easier reading */
-    margin: 0 auto;
+    /* letter-spacing: 1px;
+    padding: 2rem; */
+    line-height: 1.5; /* Increases line spacing for readability */
+    max-width: 600px; /* Limits the width for easier reading */
  
 }
 .contact figcaption h2{
+    font-size: var(--large-text-size);
     color: var(--light);
     font-weight: var(--extra-bold);
     margin-bottom: 1rem;
@@ -181,16 +191,16 @@ color: grey;
 }
 .our_goals{
     display: flex;
+    justify-content: center;
+    gap: 10rem;
     align-items: center;
 }
 .our_goals figcaption{
     font-size: var(--medium-text-size);
-    letter-spacing: 1px;
-    padding: 2rem;
-    line-height: 1.6; /* Increases line spacing for readability */
-    max-width: 800px; /* Limits the width for easier reading */
-    margin: 0 auto;
-
+    /* letter-spacing: 1px;
+    padding: 2rem; */
+    line-height: 1.5; /* Increases line spacing for readability */
+    max-width: 600px; /* Limits the width for easier reading */
 }
 .our_goals figcaption h2{
     color: var(--cta-bg-color);
@@ -249,8 +259,24 @@ color: grey;
     .about img,
     .contact img,
     .our_goals img {
+        
         width: 45%;
+        height: auto;
     }
+    .about,.our_goals,.contact{
+        gap: 5rem;
+    }
+    .about figcaption h2{
+        margin-bottom: 0.5rem;
+    }
+    .about figcaption , .our_goals figcaption , .contact figcaption{
+        font-size: var(--medium-text-size);
+        padding: 1rem;
+        line-height: 1.2; /* Increases line spacing for readability */
+        max-width: 600px; /* Limits the width for easier reading */
+        /* margin: 0 auto; Centers the text block within its container */
+    }
+    
 }
 
 /* Responsive adjustments */
@@ -265,29 +291,29 @@ color: grey;
         flex-direction: column;
         gap: 0.5rem;
       }
+      
+      #about_sec{
+        margin-top: 7rem;
+      }
 
     .about,
     .contact,
     .our_goals {
         flex-direction: column;   
-        text-align: center;
+        justify-content: center;
     }
 
-    .about img {
-        
-        width: 60%;
-        margin-top: 4rem;
-        display: block; /* Ensure the About section image is visible */
-    }
+    
 
     .contact img,
-    .our_goals img {
+    .our_goals img,.about img  {
         display: none; /* Hide images in Contact and Our Goals sections */
     }
 
     figcaption {
         padding: 1rem;
-        margin: 0 auto;
+        line-height: 1;
+        
 
     }
 }
@@ -295,6 +321,10 @@ color: grey;
 @media (max-width: 480px) {
     .main_nav {
         padding: 1rem;
+    }
+    #about_sec{
+        margin-top: 10rem;
+
     }
 
     .about img {
@@ -304,6 +334,5 @@ color: grey;
 
     figcaption {
         font-size: var(--small-text-size);
-        line-height: 0;
     }
 }
