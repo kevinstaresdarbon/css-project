@@ -103,7 +103,8 @@ body {
   height: 60vh;
   background-color: var(--dark);
   gap: 1rem;
-  padding-top: 3rem;
+  padding-top: 1rem;
+  margin-top: 77px;
 }
 /* end of hero style */
 /* hero left style */
@@ -126,6 +127,7 @@ body {
   font-size: var(--small-text-size);
   color: var(--grey-blue);
   margin-top: 1rem;
+  padding: 1rem;
   text-align: justify;
 }
 
@@ -338,7 +340,7 @@ body {
 
   #hero {
     height: auto;
-    margin-top: 5rem;
+    margin-top: 130px;
   }
 
   .hero_left {
